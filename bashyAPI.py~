@@ -1,4 +1,6 @@
 import requests
+URL = r'https://sheetsu.com/apis/7c526569'
+
 
 def get_response(url: str) -> dict:
 	response = requests.get(URL)
