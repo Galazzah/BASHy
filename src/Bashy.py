@@ -25,7 +25,7 @@ def install_package(api: str, pckg_name : str, targ : str) -> str:
 #update package flow
 def update_package(api : str, pckg_name : str, targ : str) -> str:
 	git_url = get_package_url(pckg_name, api)
-	subprocess.call(["cd {}; cd {}; git pull {}".format(targ,pckg_name, git_url)], shell = True)
+	subprocess.call(["cd {}; cd {}; git pull".format(targ,pckg_name)], shell = True)
 
 if first_command in ["install", "update"]:
 	PROFILEURL = r'https://docs.google.com/spreadsheets/d/{}/gviz/tq?tq='.format(os.getenv("PROFILEURL"))
