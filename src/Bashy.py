@@ -4,12 +4,14 @@ import subprocess
 from bashyAPI import *
 
 
-URL = r'https://docs.google.com/spreadsheets/d/14pMZ-SvxD1ui5UZMs82TjH_ykDsVo713uY7mbyw5Rm0/gviz/tq?tq='
+
 targ = os.path.dirname(os.path.dirname(os.path.realpath(__file__))) + "/assets/"
+
+
 
 first_command = argv[1]
 pckg_name = argv[2]
-
+api_name = argv[4]
 
 #install package flow
 def install_package(api: str, pckg_name : str, targ : str) -> str:
@@ -24,11 +26,15 @@ def update_package(api : str, pckg_name : str, targ : str) -> str:
 	git_url = get_package_url(pckg_name, api)
 	subprocess.call(["cd {}; git pull {}".format(targ, git_url)], shell = True)
 
+if first_command in ["install", "update"]:
+	PROFILEURL = r'https://docs.google.com/spreadsheets/d/{}/gviz/tq?tq='.format(os.getenv("PROFILEURL"))
+	target_api = r'https://docs.google.com/spreadsheets/d/{}/gviz/tq?tq='.format(
+get_api_url(PROFILEURL, api_name))
 
-if first_command == "install":
-	install_package(URL, pckg_name, targ)
-elif first_command == "update":
-	#update
-	update_package(URL, pckg_name, targ)
+
+	if first_command == "install":
+		install_package(target_api, pckg_name, targ)
+	elif first_command == "update":
+		update_package(URL, pckg_name, targ)
 
 	
