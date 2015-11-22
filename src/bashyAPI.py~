@@ -7,7 +7,8 @@ def get_api_url(user_api : str, target_api : str)  -> str:
 	print(user_api, query)
 	response = requests.get(user_api + query)
 	result = json.loads(response.text[47:-2])
-	return result['table']['rows'][0]['c'][0]['v']
+	print(result)	
+	#return result['table']['rows'][0]['c'][0]['v']
 	
 
 def get_package_url(pckg_name: str, api : str) -> str:
