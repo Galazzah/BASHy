@@ -4,21 +4,31 @@ import subprocess
 from bashyAPI import *
 
 
-URL = r'https://sheetsu.com/apis/7c526569'
+URL = r'https://docs.google.com/spreadsheets/d/14pMZ-SvxD1ui5UZMs82TjH_ykDsVo713uY7mbyw5Rm0/gviz/tq?tq='
 targ = os.path.dirname(os.path.dirname(os.path.realpath(__file__))) + "/assets/"
-print(targ)
+
 first_command = argv[1]
 pckg_name = argv[2]
 
 
 #install package flow
 def install_package(api: str, pckg_name : str, targ : str) -> str:
-	response = get_response(URL)
-	pckg = get_package(response, pckg_name)
-	git_url = get_package_url(pckg)
-	subprocess.call(["(cd {};  git clone {})".format(targ, git_url)], shell = True)
+	git_url = get_package_url(pckg_name, api)
+	subprocess.call(["(cd {};  git clone {}; cd ..; cd src; echo source {} >> bashy_aliases )".format(targ, git_url, targ + pckg_name + "/" + pckg_name +".sh")], shell = True)
 
 	#"git clone {}".format(git_url)
 	#subprocess.call(["git clone {}".format(git_url)], shell = True)
-install_package(URL, pckg_name, targ) 
+
+#update package flow
+def update_package(api : str, pckg_name : str, targ : str) -> str:
+	git_url = get_package_url(pckg_name, api)
+	subprocess.call(["cd {}; git pull {}".format(targ, git_url)], shell = True)
+
+
+if first_command == "install":
+	install_package(URL, pckg_name, targ)
+elif first_command == "update":
+	#update
+	update_package(URL, pckg_name, targ)
+
 	

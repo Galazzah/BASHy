@@ -1,22 +1,14 @@
 import requests
+from urllib.parse import urlencode
+import json
 
-def get_response(url: str) -> dict:
-	response = requests.get(url)
-	return response.json()['result']
 
-def get_package(pckg_json: dict, pckg_name: str) -> dict:
-	for package in pckg_json:
-		if package['Name'] == pckg_name:
-			return package
 
-#install package flow
-def get_package_url(pckg: str) -> str:
-	return pckg['URL']
-
-#update package flow
-def get_version(pckg_json: dict, pckg_name: str) -> float:
-	pckg = get_package(pckg_name)
-	return pckg['Version']
+def get_package_url(pckg_name: str, api : str) -> str:
+	query = "select%20C%20where%20B%20='{}'".format(pckg_name)
+	response = requests.get(api + query)
+	result = json.loads(response.text[47:-2])
+	return result['table']['rows'][0]['c'][0]['v']
 
 
 
