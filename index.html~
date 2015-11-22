@@ -11,7 +11,7 @@
   </head>
   <body>
     <section class="page-header">
-      <h1 class="project-name"><div style ="width: 100%;"<img src ="BASHyWhite.png"></div></h1>
+      <h1 class="project-name"><div style ="max-width: 100%; height: auto; width: auto\9;"><img src ="BASHyWhite.png"></div></h1>
       <h2 class="project-tagline">a BASH script package manager for everyone</h2>
       <a href="https://github.com/Galazzah/BASHy" class="btn">View on GitHub</a>
       <a href="https://github.com/Galazzah/BASHy/zipball/master" class="btn">Download .zip</a>
