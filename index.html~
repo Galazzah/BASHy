@@ -11,7 +11,7 @@
   </head>
   <body>
     <section class="page-header">
-      <h1 class="project-name"><img src ="BASHyWhite.png"></h1>
+      <h1 class="project-name"><div style ="width: 100%;"<img src ="BASHyWhite.png"></div></h1>
       <h2 class="project-tagline">a BASH script package manager for everyone</h2>
       <a href="https://github.com/Galazzah/BASHy" class="btn">View on GitHub</a>
       <a href="https://github.com/Galazzah/BASHy/zipball/master" class="btn">Download .zip</a>
@@ -20,19 +20,19 @@
 
     <section class="main-content">
       <h3>
-<a id="bashy" class="anchor" href="#bashy" aria-hidden="true"><span class="octicon octicon-link"></span></a>BASHy.</h3>
+<a id="bashy" class="anchor" href="#bashy" aria-hidden="true"><span class="octicon octicon-link"></span></a>BASHy</h3>
 
 <p>Love BASH scripting? Love people who script with BASH? Don't love sharing and versioning your scripts with people who love to script with BASH? BASHy creates a layer of abstraction to make your life easier.</p>
 
 <h3>
 <a id="self-hosted-with-google-spreadsheets-as-a-database" class="anchor" href="#self-hosted-with-google-spreadsheets-as-a-database" aria-hidden="true"><span class="octicon octicon-link"></span></a>Self hosted with Google Spreadsheets as a database</h3>
 
-<p>Using a server based database to store, maintain, and download packages would be a hassle. With BASHy, simply upload your script to a git repository and add an entry to your Spreadsheet!</p>
+<p>Using a server-based database to store, maintain, and download packages would be a hassle. With BASHy, simply upload your script to a git repository and add an entry to your Spreadsheet!</p>
 
 <h3>
-<a id="channels-for-you-and-me-and-everyone" class="anchor" href="#channels-for-you-and-me-and-everyone" aria-hidden="true"><span class="octicon octicon-link"></span></a>Channels for you, and me, and everyone</h3>
+<a id="channels-for-you-and-me-and-everyone" class="anchor" href="#channels-for-you-and-me-and-everyone" aria-hidden="true"><span class="octicon octicon-link"></span></a>Channels for you, me, and everyone</h3>
 
-<p>BASHy leverages the idea of Channels, or community databases (hosted on Google drive) to share your BASH scripts with your friends. Simply grab the URL of a Channel you would like to join, and you're ready to go! Add as many Channels as you'd like!</p>
+<p>BASHy leverages the idea of Channels, or community databases (hosted on Google drive) to share your BASH scripts with your friends. Simply grab the URL of a Channel you would like to join, and you're ready to go. Add as many Channels as you'd like!</p>
 
 <h3>
 <a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
