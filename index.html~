@@ -30,7 +30,7 @@
 <h3>
 <a id="self-hosted-with-google-spreadsheets-as-a-database" class="anchor" href="#self-hosted-with-google-spreadsheets-as-a-database" aria-hidden="true"><span class="octicon octicon-link"></span></a>Self hosted with Google Spreadsheets as a database</h3>
 
-<p>Using a server-based database to store, maintain, and download packages would be a hassle. With BASHy, simply upload your script to a git repository and add an entry to your Spreadsheet!</p>
+<p>Because using a server-based database to store, maintain, and download packages would be a hassle, BASHy is written using a custom API that leverages the <a href ="https://developers.google.com/chart/interactive/docs/reference?hl=en" target="_blank">Google Visualization API</a> and <a href="https://developers.google.com/chart/interactive/docs/querylanguage?hl=en" target="_blank"> the Google Query Language (GQL) </a> to host each Channel on a Google Spreadsheet (Google Spreadsheets as a database), Python, Git, and BASH.</p>
 
 <h3>
 <a id="channels-for-you-and-me-and-everyone" class="anchor" href="#channels-for-you-and-me-and-everyone" aria-hidden="true"><span class="octicon octicon-link"></span></a>Channels for you, me, and everyone</h3>
@@ -40,7 +40,7 @@
 <h3>
 <a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
 
-<p>Created for HackUCI 2015 by Ghiyath Alazzah (<a href="https://github.com/galazzah" class="user-mention">@galazzah</a>), Maxime Zaccarin (<a href="https://github.com/maxzac1289" class="user-mention">@maxzac1289</a>), Ali Shahbaz (<a href="https://github.com/alishahbaz111" class="user-mention">@alishahbaz111</a>), Haseeb Hassan (<a href="https://github.com/hassquared" class="user-mention">@hassquared</a>, and Huda Herwees (<a href="https://github.com/hherwees" class="user-mention">@hherwees</a>).</p>
+<p>Created for HackUCI 2015 by Ghiyath Alazzah (<a href="https://github.com/galazzah" class="user-mention">@galazzah</a>), Maxime Zaccarin (<a href="https://github.com/maxzac1289" class="user-mention">@maxzac1289</a>), Ali Shahbaz (<a href="https://github.com/alishahbaz111" class="user-mention">@alishahbaz111</a>), Haseeb Hassan (<a href="https://github.com/hassquared" class="user-mention">@hassquared</a>), and Huda Herwees (<a href="https://github.com/hherwees" class="user-mention">@hherwees</a>).</p>
 
 <h3>
 <a id="technology" class="anchor" href="#technology" aria-hidden="true"><span class="octicon octicon-link"></span></a>Technology</h3>
